@@ -30,7 +30,6 @@ parameters:
 steps:
   - run:
       name: Start Test Suite
-      description: "Start Test Suite"
       environment:
         PARAM_API_KEY: << parameters.api_key >>
         PARAM_SUITE_ID: << parameters.suite_id >>
@@ -42,7 +41,6 @@ steps:
       steps:
         - run:
           name: Wait for Test Results
-          description: "Wait for Test Results"
           command: <<include(scripts/wait_for_suite_execution.sh)>>
           environment:
             PARAM_API_KEY: << parameters.api_key >>
