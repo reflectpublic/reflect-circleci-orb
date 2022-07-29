@@ -36,12 +36,3 @@ steps:
         PARAM_OVERRIDES: << parameters.overrides >>
         PARAM_VARIABLES: << parameters.variables >>
       command: <<include(scripts/run_suite.sh)>>
-  - when:
-      condition: << parameters.wait_for_test_results >>
-      steps:
-        - run:
-          name: Wait for Test Results
-          command: <<include(scripts/wait_for_suite_execution.sh)>>
-          environment:
-            PARAM_API_KEY: << parameters.api_key >>
-            PARAM_SUITE_ID: << parameters.suite_id >>
