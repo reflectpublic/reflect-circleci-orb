@@ -28,7 +28,7 @@ parameters:
     type: boolean
     default: false
 steps:
-  - run_tests:
+  - run:
       name: Start Test Suite
       environment:
         PARAM_API_KEY: << parameters.api_key >>
