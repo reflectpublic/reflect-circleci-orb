@@ -15,14 +15,14 @@ parameters:
     description:
       "An optional JSON blob containing overrides for this suite execution. See
       https://reflect.run/docs/developer-api/suites-api/#execute-a-suite for more information."
-      type: string
-      default: ""
+    type: string
+    default: ""
   variables:
     description:
       "An optional JSON blob containing modified variable values for this suite execution. See
       https://reflect.run/docs/developer-api/suites-api/#execute-a-suite for more information."
-      type: string
-      default: ""
+    type: string
+    default: ""
   wait_for_test_results:
     description: "Waits for the test suite to complete and passes/fails this job based on the results of the tests."
     type: boolean
