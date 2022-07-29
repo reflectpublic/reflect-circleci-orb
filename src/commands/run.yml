@@ -1,0 +1,47 @@
+description: >
+  Executes a Reflect test suite.
+parameters:
+  suite_id:
+    description: "The ID value displayed when viewing the Suite in Reflect."
+    type: string
+    default: ""
+  api_key:
+    description:
+      "The API key associated with your Reflect account. Set this via the REFLECT_API_KEY variable using CircleCI
+      Environment Variables."
+    type: env_var_name
+    default: REFLECT_API_KEY
+  overrides:
+    description:
+      "An optional JSON blob containing overrides for this suite execution. See
+      https://reflect.run/docs/developer-api/suites-api/#execute-a-suite for more information."
+      type: string
+      default: ""
+  variables:
+    description:
+      "An optional JSON blob containing modified variable values for this suite execution. See
+      https://reflect.run/docs/developer-api/suites-api/#execute-a-suite for more information."
+      type: string
+      default: ""
+  wait_for_test_results:
+    description: "Waits for the test suite to complete and passes/fails this job based on the results of the tests."
+    type: boolean
+    default: false
+steps:
+  - run:
+      name: Start Test Suite
+      environment:
+        PARAM_API_KEY: << parameters.api_key >>
+        PARAM_SUITE_ID: << parameters.suite_id >>
+        PARAM_OVERRIDES: << parameters.overrides >>
+        PARAM_VARIABLES: << parameters.variables >>
+      command: <<include(scripts/run_suite.sh)>>
+  - when:
+      condition: << parameters.wait_for_test_results >>
+      steps:
+        - run:
+          name: Wait for Test Results
+          command: <<include(scripts/wait_for_suite_execution.sh)>>
+          environment:
+            PARAM_API_KEY: << parameters.api_key >>
+            PARAM_SUITE_ID: << parameters.suite_id >>
