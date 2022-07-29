@@ -1,13 +1,11 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Executes a Reflect test suite.
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    reflect: reflect/reflect-circleci-orb@0.1
   workflows:
-    use-my-orb:
+    build:
       jobs:
-        - <orb-name>/<job-name>
+        - reflect/run_tests:
+            suite_id: qa-tests
