@@ -11,14 +11,6 @@ filters: &filters
 workflows:
   lint-pack:
     jobs:
-      - orb-tools/lint:
-          filters: *filters
-      - orb-tools/pack:
-          filters: *filters
-      - orb-tools/review:
-          filters: *filters
-      - shellcheck/check:
-          filters: *filters
       - orb-tools/publish:
           orb-name: reflect/reflect-circleci-orb
           vcs-type: github
