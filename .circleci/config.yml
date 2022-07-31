@@ -22,7 +22,6 @@ workflows:
       - orb-tools/publish:
           orb-name: reflect/reflect-circleci-orb
           vcs-type: github
-          requires: [orb-tools/lint]
           # Use a context to hold your publishing token.
           context: orb-publishing
           filters: *filters
