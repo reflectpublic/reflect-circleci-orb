@@ -17,9 +17,3 @@ workflows:
           # Use a context to hold your publishing token.
           context: orb-publishing
           filters: *filters
-      # Triggers the next workflow in the Orb Development Kit.
-      - orb-tools/continue:
-          pipeline-number: << pipeline.number >>
-          vcs-type: github
-          requires: [orb-tools/publish]
-          filters: *filters
