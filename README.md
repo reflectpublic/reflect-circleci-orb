@@ -1,19 +1,12 @@
-# Orb Template
+# Reflect CircleCI Orb
 
 [![CircleCI Build Status](https://circleci.com/gh/reflectpublic/reflect-circleci-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/reflectpublic/reflect-circleci-orb)
 [![CircleCI Orb Version](https://badges.circleci.com/orbs/reflect/reflect-circleci-orb.svg)](https://circleci.com/orbs/registry/orb/reflect/reflect-circleci-orb)
 [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/reflectpublic/reflect-circleci-orb/master/LICENSE)
 [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
-A project template for Orbs.
-
-This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
-
-_**Edit this area to include a custom title and description.**_
-
----
-
-## Resources
+This repo contains the source code for the Reflect CircleCI orb which enables Reflect tests to be automatically run as
+part of a CircleCI build pipeline.
 
 [CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/reflect/reflect-circleci-orb) - The official
 registry page of this orb for all versions, executors, commands, and jobs described.
