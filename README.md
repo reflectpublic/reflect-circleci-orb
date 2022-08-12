@@ -8,8 +8,8 @@
 This repo contains the source code for the Reflect CircleCI orb which enables Reflect tests to be automatically run as
 part of a CircleCI build pipeline.
 
-[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/reflect/reflect-circleci-orb) - The official
-registry page of this orb for all versions, executors, commands, and jobs described.
+[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/reflect/reflect) - The official registry page of
+this orb for all versions, executors, commands, and jobs described.
 
 [CircleCI Orb Docs](https://circleci.com/docs/2.0/orb-intro/#section=configuration) - Docs for using, creating, and
 publishing CircleCI Orbs.
@@ -24,7 +24,7 @@ We welcome [issues](https://github.com/reflectpublic/reflect-circleci-orb/issues
 1. Merge pull requests with desired changes to the main branch.
    - For the best experience, squash-and-merge and use [Conventional Commit Messages](https://conventionalcommits.org/).
 2. Find the current version of the orb.
-   - You can run `circleci orb info reflect/reflect-circleci-orb | grep "Latest"` to see the current version.
+   - You can run `circleci orb info reflect/reflect | grep "Latest"` to see the current version.
 3. Create a [new Release](https://github.com/reflectpublic/reflect-circleci-orb/releases/new) on GitHub.
    - Click "Choose a tag" and _create_ a new [semantically versioned](http://semver.org/) tag. (ex: v1.0.0)
      - We will have an opportunity to change this before we publish if needed after the next step.
