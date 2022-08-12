@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  reflect: reflect/reflect-circleci-orb@dev:<<pipeline.git.revision>>
+  reflect: reflect/reflect@dev:<<pipeline.git.revision>>
   orb-tools: circleci/orb-tools@11.1
 
 filters: &filters
@@ -23,7 +23,7 @@ workflows:
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
-          orb-name: reflect/reflect-circleci-orb
+          orb-name: reflect/reflect
           vcs-type: << pipeline.project.type >>
           pub-type: production
           requires:
