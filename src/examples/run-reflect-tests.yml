@@ -1,0 +1,11 @@
+description: >
+  Run end-to-end tests using Reflect's no-code testing platform.
+usage:
+  version: 2.1
+  orbs:
+    reflect: reflect/reflect@0.2.0
+  workflows:
+    build:
+      jobs:
+        - reflect/run:
+            suite_id: qa-tests
