@@ -12,12 +12,13 @@ jobs:
     docker:
       - image: cimg/base:current
     steps:
-      - checkout
       - reflect/run_tests:
           suite_id: circleci-tests
 workflows:
   test-deploy:
     jobs:
+      - reflect/run:
+          suite_id: circleci-tests
       - command-tests:
           filters: *filters
       - orb-tools/pack:

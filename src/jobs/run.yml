@@ -1,6 +1,7 @@
 description: >
   Executes a Reflect test suite.
-executor: default
+docker:
+  - image: "cimg/node:<<parameters.cimg_tag>>"
 parameters:
   suite_id:
     description: "The ID value displayed when viewing the Suite in Reflect."
@@ -28,6 +29,10 @@ parameters:
     description: "Waits for the test suite to complete and passes/fails this job based on the results of the tests."
     type: boolean
     default: false
+  cimg_tag:
+    description: "Pick a specific cimg/node image variant: https://hub.docker.com/r/cimg/node/tags"
+    type: string
+    default: lts
 steps:
   - run_tests:
       suite_id: << parameters.suite_id >>

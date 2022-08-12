@@ -7,5 +7,5 @@ usage:
   workflows:
     build:
       jobs:
-        - reflect/run_tests:
+        - reflect/run:
             suite_id: qa-tests
