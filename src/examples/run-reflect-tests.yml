@@ -3,7 +3,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    reflect: reflect/reflect-circleci-orb@0.1.0
+    reflect: reflect/reflect@0.1.0
   workflows:
     build:
       jobs:
